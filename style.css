@@ -1,26 +1,89 @@
+:root {
+  /* --bg-color: #232a31;
+  --text-color: #FFF;
+  --check-left-color: #17bebb;
+  --check-right-color: #57bc59;
+  --check-btn-bg-color: #474747;
+  --check-bg-color: #2e2e2e; */
+  /* --bg-color: #ebebeb; */
+  /* --text-color: #22181c; */
+  /* --check-left-color: #deb841; */
+  /* --check-right-color: #aa4465; */
+  /* --check-btn-bg-color: #645853; */
+  /* --check-bg-color: #241909; */
+}
+
 body {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0 auto;
   padding: 0;
+  width: 100vw;
+  height: 95vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 #app {
-  margin: 0 auto;
+  margin: 5vh 0 0 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-h3 {
-  font-size: 1.8em;
+/* 
+Toggle button
+credits: https://github.com/CodingGarden/twitch-bot/blob/master/client/src/components/Toggle.vue
+*/
+
+.toggle {
+  --height: 24px;
+  width: calc(var(--height) * 2);
+  display: inline-block;
+  background: var(--check-bg-color);
+  border-radius: calc(var(--height) * 0.5);
+  cursor: pointer;
+  margin: 0 0.8em;
+}
+
+.toggle-thumb {
+  width: var(--height);
+  height: var(--height);
+  background: transparent;
+  box-sizing: border-box;
+  border: 3px solid var(--check-btn-bg-color);
+  border-radius: 50%;
+  background: var(--check-left-color);
+  transition: 150ms transform, 100ms background;
+}
+
+.toggle.toggle-checked .toggle-thumb {
+  border: 3px solid var(--check-btn-bg-color);
+  background: var(--check-right-color);
+  transform: translateX(var(--height));
+}
+
+div#selector {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+span.span-selector {
+  font-style: italic;
 }
 
 textarea {
   font-family: 'Courier New', Courier, monospace;
   width: 80%;
-  height: 25vh;
+  min-height: 10vh;
+  height: 20vh;
   resize: none;
   font-size: 1.5em;
-  border: 1px solid #000;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 #outputText {
@@ -28,9 +91,13 @@ textarea {
 }
 
 #creditos {
-  margin-top: 20px;
-  display: inline-block;
-  text-align: center;
+  margin-top: 5vh;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-direction: column;
 }
 
 #creditos span {
@@ -44,5 +111,23 @@ a {
 
 a:visited {
   font-weight: bold;
-  color: #000;
+  color: var(--text-color);
+}
+
+#theme-changer {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+  color: var(--text);
+  cursor: pointer;
+}
+
+span#emoji {
+  font-size: 1.5em;
+}
+
+.bold {
+  font-weight: bold;
 }
