@@ -14,8 +14,7 @@
 }
 
 body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 0 auto;
   padding: 0;
   width: 100vw;
@@ -45,6 +44,7 @@ credits: https://github.com/CodingGarden/twitch-bot/blob/master/client/src/compo
   cursor: pointer;
   margin: 0 0.8em;
 }
+
 .toggle-thumb {
   width: var(--height);
   height: var(--height);
@@ -55,6 +55,7 @@ credits: https://github.com/CodingGarden/twitch-bot/blob/master/client/src/compo
   background: var(--check-left-color);
   transition: 150ms transform, 100ms background;
 }
+
 .toggle.toggle-checked .toggle-thumb {
   border: 3px solid var(--check-btn-bg-color);
   background: var(--check-right-color);
@@ -74,7 +75,7 @@ span.span-selector {
 }
 
 textarea {
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   width: 80%;
   min-height: 10vh;
   height: 20vh;
@@ -98,7 +99,6 @@ textarea {
   flex-direction: row;
   flex-direction: column;
 }
-
 
 #creditos span {
   font-size: 0.8em;
